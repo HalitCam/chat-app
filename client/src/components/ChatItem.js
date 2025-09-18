@@ -1,8 +1,9 @@
+import React from "react";
 import styles from './styles.module.css'
 
 const ChatItem = ({item}) => {
     return (
-        <div className={styles.chatItem}>
+        <div className={styles.textItem}>
             {item.message}
         </div>
     );
