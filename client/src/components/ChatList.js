@@ -9,7 +9,7 @@ function ChatList(){
     return(
         <div className={styles.chatlist}>
             <div>
-                {messages.map((item,key)=> (<ChatItem item={item}/>))}
+                {messages.map((item,key)=> (<ChatItem key={key} item={item}/>))}
             </div>
         </div>
     )

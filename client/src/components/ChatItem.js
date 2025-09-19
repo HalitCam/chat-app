@@ -3,7 +3,7 @@ import styles from './styles.module.css'
 
 const ChatItem = ({item}) => {
     return (
-        <div className={styles.textItem}>
+        <div className={styles.chatItem}>
             {item.message}
         </div>
     );

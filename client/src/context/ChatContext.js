@@ -23,6 +23,6 @@ export function ChatProvider({ children }) {
 export const useChat = () => useContext(ChatContext);
 
 
-// export default ChatContext; instead of that will I use useContext() above:
+// export default ChatContext; instead of that I will use useContext() above:
 
 
