@@ -4,25 +4,18 @@ import { useChat } from '../context/ChatContext';
 
 
 const ChatForm = () => {
-    
-    const {messages,setMessages} =useChat()
-    let prev = {...messages}
-    console.log(prev)
-    console.log(messages)
-    // const [state, setstate] = useState("");
-        const inputHandler = (e) => {
-            // e.preventDefault();
-            // console.log(messages)
-            
-           
-        }
+    const [inputData, setInputData] = useState("")
+    // const {messages , setmessages} =useChat();
+    const inputHandler = (e) => {
+        e.preventDefault();
+        console.log(inputData)
+        setInputData("");
+    }
 
     return (
-    
-
         <div>
             <form onSubmit={inputHandler}>
-                <input placeholder='ENTER MESSAGE...' type="text" className={styles.textInput} onChange={(e) => {setMessages(prev,{ message:  e.target.value}) }}/>
+                <input placeholder='ENTER MESSAGE...' value={inputData} type="text" className={styles.textInput} onChange={(e)=>setInputData(e.target.value)}/>
                
             </form>
             
@@ -32,4 +25,3 @@ const ChatForm = () => {
 
 export default ChatForm;
 
-// onKeyDown={(e) => {if(e.key === "ENTER") console.log("e.target.value")
