@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styles from './styles.module.css'
 import { useChat } from '../context/ChatContext';
 
-
 const ChatForm = () => {
     const [inputData, setInputData] = useState("")
     // const {messages , setmessages} =useChat();
