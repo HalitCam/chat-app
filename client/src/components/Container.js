@@ -11,7 +11,7 @@ const Container = () => {
         init();
 
         subscribeChat((message) => {
-            setMessages((prevState) => [...prevState, {message}])
+            setMessages((prevState) => [...prevState, {message, fromMe:false}])
         });
 
     }, [])

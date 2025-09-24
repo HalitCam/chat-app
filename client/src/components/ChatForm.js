@@ -6,14 +6,14 @@ import {sendMessage} from "../socketApi"
 
 const ChatForm = () => {
     const [inputData, setInputData] = useState("")
-    const {messages , setMessages} =useChat();
+    const {setMessages} =useChat();
     
 
     const inputHandler = (e) => {
         e.preventDefault();
         console.log(inputData)
-
-        setMessages((prevState) => [...prevState, { message :`${inputData}`, fromMe:true}])
+  
+        setMessages((prevState) => [...prevState, { message :`${inputData}` , fromMe : true}])
         sendMessage(inputData);
         setInputData("");
         
